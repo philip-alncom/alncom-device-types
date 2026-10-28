@@ -17,11 +17,12 @@ interfaces:
     label: Ethernet
     type: 1000base-t
     poe_mode: pd
-    poe_type: type2-ieee802.3at
-    description: "PoE in: 802.3at (type 2)"
+    poe_type: passive-24v-2pair
+    description: "PoE in: passive 24 V"
   - name: ath0
     label: Wireless
     type: ieee802.11ac
 power-ports:
   - name: PoE in
     type: other
+    maximum_draw: 10

@@ -19,3 +19,4 @@ interfaces:
 power-ports:
   - name: PoE in
     type: other
+    maximum_draw: 8.5
