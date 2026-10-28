@@ -25,3 +25,6 @@ interfaces:
   - name: ath0
     label: Wireless
     type: other-wireless
+power-ports:
+  - name: PoE in
+    type: other

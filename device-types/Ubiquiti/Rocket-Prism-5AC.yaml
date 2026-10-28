@@ -15,3 +15,6 @@ interfaces:
     poe_type: passive-24v-2pair
   - name: wlan0
     type: ieee802.11ac
+power-ports:
+  - name: PoE in
+    type: other

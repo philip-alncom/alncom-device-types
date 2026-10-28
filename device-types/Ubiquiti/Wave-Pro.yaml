@@ -30,3 +30,6 @@ interfaces:
   - name: wlan0
     label: 5 GHz
     type: ieee802.11ax
+power-ports:
+  - name: PoE in
+    type: other

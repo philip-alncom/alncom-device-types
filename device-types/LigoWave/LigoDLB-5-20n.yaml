@@ -22,3 +22,6 @@ interfaces:
   - name: ath0
     label: Wireless
     type: ieee802.11n
+power-ports:
+  - name: PoE in
+    type: other
