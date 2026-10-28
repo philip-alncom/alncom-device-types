@@ -6,7 +6,7 @@ part_number: DLB 5-90-20ac PRO
 u_height: 0
 is_full_depth: false
 comments: |
-  10/100/1000 Base-T, 802.3af/at passive PoE (pins 4,5 + and 7,8 -). Test import: change after if it differs from your 5-90-17ac PRO.
+  10/100/1000 Base-T, 802.3af PoE (37-56 V), 10 W max. From the LigoDLB PRO ac datasheet. Test import: change after if it differs from your 5-90-17ac PRO.
   From LigoWave's 2018 product overview. Interface names follow a real LigoDLB 5-15n SNMP walk (eth0, ath0, br0).
 airflow: passive
 interfaces:
@@ -17,11 +17,12 @@ interfaces:
     label: Ethernet
     type: 1000base-t
     poe_mode: pd
-    poe_type: type2-ieee802.3at
-    description: "PoE in: 802.3at (type 2)"
+    poe_type: type1-ieee802.3af
+    description: "PoE in: 802.3af, 37-56 V"
   - name: ath0
     label: Wireless
     type: ieee802.11ac
 power-ports:
   - name: PoE in
     type: other
+    maximum_draw: 10
