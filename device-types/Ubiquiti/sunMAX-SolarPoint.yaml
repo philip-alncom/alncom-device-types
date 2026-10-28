@@ -14,18 +14,22 @@ interfaces:
     type: 100base-tx
     poe_mode: pse
     poe_type: passive-24v-2pair
+    description: "PoE out: passive 24 V"
   - name: port2
     type: 100base-tx
     poe_mode: pse
     poe_type: passive-24v-2pair
+    description: "PoE out: passive 24 V"
   - name: port3
     type: 100base-tx
     poe_mode: pse
     poe_type: passive-24v-2pair
+    description: "PoE out: passive 24 V"
   - name: port4
     type: 100base-tx
     poe_mode: pse
     poe_type: passive-24v-2pair
+    description: "PoE out: passive 24 V"
   - name: wlan0
     label: WiFi
     type: other-wireless
@@ -34,3 +38,12 @@ power-ports:
     type: dc-terminal
   - name: Battery
     type: dc-terminal
+power-outlets:
+  - name: PoE out 1
+    type: other
+  - name: PoE out 2
+    type: other
+  - name: PoE out 3
+    type: other
+  - name: PoE out 4
+    type: other
