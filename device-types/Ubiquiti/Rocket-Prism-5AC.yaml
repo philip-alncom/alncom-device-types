@@ -7,13 +7,17 @@ u_height: 0
 is_full_depth: false
 comments: |
   First-generation Rocket Prism; the library only has Gen2 (same layout). Components not yet checked against a datasheet or a real unit: check before relying on them.
+  Interface names follow real SNMP walks (eth0, ath0, br0).
 airflow: passive
 interfaces:
-  - name: lan0
+  - name: br0
+    type: bridge
+    mgmt_only: true
+  - name: eth0
     type: 1000base-t
     poe_mode: pd
     poe_type: passive-24v-2pair
-  - name: wlan0
+  - name: ath0
     type: ieee802.11ac
 power-ports:
   - name: PoE in

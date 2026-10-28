@@ -8,15 +8,19 @@ is_full_depth: false
 comments: |
   LTU is Ubiquiti's own radio protocol, so the radio is listed as 'other wireless'. From Ubiquiti's tech specs page.
   2 x GbE RJ45, no SFP. Passive PoE input on 4 pairs or 2 pairs, 18-54 V DC (24 V 1 A adapter included). No PoE passthrough is listed, so neither port is PoE out.
+  Interface names follow real SNMP walks (eth0, ath0, br0). The second port lan1 is not in the walk (only eth0 is reported), so its name is a guess.
 airflow: passive
 interfaces:
-  - name: lan0
+  - name: br0
+    type: bridge
+    mgmt_only: true
+  - name: eth0
     type: 1000base-t
     poe_mode: pd
     poe_type: passive-24v-4pair
   - name: lan1
     type: 1000base-t
-  - name: wlan0
+  - name: ath0
     type: other-wireless
 power-ports:
   - name: PoE in
