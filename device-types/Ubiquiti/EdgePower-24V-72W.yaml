@@ -29,4 +29,3 @@ power-ports:
 power-outlets:
   - name: DC Out
     type: dc-terminal
-    power_port_template: AC In
