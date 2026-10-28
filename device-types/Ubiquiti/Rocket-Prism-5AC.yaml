@@ -1,0 +1,17 @@
+---
+manufacturer: Ubiquiti
+model: Rocket Prism 5AC
+slug: ubiquiti-rocket-prism-5ac
+part_number: RP-5AC
+u_height: 0
+is_full_depth: false
+comments: |
+  First-generation Rocket Prism; the library only has Gen2 (same layout). Components not yet checked against a datasheet or a real unit: check before relying on them.
+airflow: passive
+interfaces:
+  - name: lan0
+    type: 1000base-t
+    poe_mode: pd
+    poe_type: passive-24v-2pair
+  - name: wlan0
+    type: ieee802.11ac

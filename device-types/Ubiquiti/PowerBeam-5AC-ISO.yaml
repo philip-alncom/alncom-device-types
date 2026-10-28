@@ -1,0 +1,17 @@
+---
+manufacturer: Ubiquiti
+model: PowerBeam 5AC ISO
+slug: ubiquiti-powerbeam-5ac-iso
+part_number: PBE-5AC-ISO
+u_height: 0
+is_full_depth: false
+comments: |
+  Same layout as the library's other PowerBeam 5AC models. Components not yet checked against a datasheet or a real unit: check before relying on them.
+airflow: passive
+interfaces:
+  - name: lan0
+    type: 1000base-t
+    poe_mode: pd
+    poe_type: passive-24v-2pair
+  - name: wlan0
+    type: ieee802.11ac

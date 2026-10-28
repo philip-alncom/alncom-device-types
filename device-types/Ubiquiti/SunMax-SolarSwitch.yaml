@@ -1,0 +1,35 @@
+---
+manufacturer: Ubiquiti
+model: SunMax SolarSwitch
+slug: ubiquiti-sunmax-solarswitch
+part_number: SM-SW-40
+u_height: 0
+is_full_depth: false
+comments: |
+  Solar charge controller (MPPT) with a 4-port switch, no WiFi. From the retailer's data: 4 x 10/100 with 24 V passive PoE out (pins 4,5+ 7,8-, 17 W per port at most), a 24 V DC output terminal (24 W, 40 W together with PoE), PV input 10-60 V (10 A, H4), external 24 V battery charging up to 7 A.
+airflow: passive
+interfaces:
+  - name: port1
+    type: 100base-tx
+    poe_mode: pse
+    poe_type: passive-24v-2pair
+  - name: port2
+    type: 100base-tx
+    poe_mode: pse
+    poe_type: passive-24v-2pair
+  - name: port3
+    type: 100base-tx
+    poe_mode: pse
+    poe_type: passive-24v-2pair
+  - name: port4
+    type: 100base-tx
+    poe_mode: pse
+    poe_type: passive-24v-2pair
+power-ports:
+  - name: PV In
+    type: dc-terminal
+  - name: Battery
+    type: dc-terminal
+power-outlets:
+  - name: DC Out
+    type: dc-terminal

@@ -1,0 +1,26 @@
+---
+manufacturer: LigoWave
+model: LigoPTP 5-23 RapidFire
+slug: ligowave-ligoptp-5-23-rapidfire
+part_number: PTP 5-23
+u_height: 0
+is_full_depth: false
+comments: |
+  Point-to-point radio. From LigoWave's 2018 product overview: 2 x 10/100/1000 Base-T, PoE 802.3af/at (42-57 V DC), no SFP listed, proprietary W-Jet V radio.
+  Which port takes PoE is not stated: eth0 is assumed.
+airflow: passive
+interfaces:
+  - name: br0
+    type: bridge
+    mgmt_only: true
+  - name: eth0
+    label: Ethernet 1
+    type: 1000base-t
+    poe_mode: pd
+    poe_type: type2-ieee802.3at
+  - name: eth1
+    label: Ethernet 2
+    type: 1000base-t
+  - name: ath0
+    label: Wireless
+    type: other-wireless

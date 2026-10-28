@@ -1,0 +1,53 @@
+---
+manufacturer: Fortinet
+model: FortiSwitch 108D-POE
+slug: fortinet-fortiswitch-108d-poe
+part_number: FS-108D-POE
+u_height: 1
+is_full_depth: false
+comments: |
+  8 x GE RJ45 PoE (802.3af, 75 W budget in total) and 2 x GE combo ports (RJ45 or SFP, one at a time), 1RU, built-in AC supply, 1.9 kg. From Fortinet's FortiSwitch D series data sheet. No console or dedicated management port.
+  Port names are numbered the way the library numbers other FortiSwitches: check them against the unit if you use them.
+airflow: passive
+weight: 1.9
+weight_unit: kg
+interfaces:
+  - name: port1
+    type: 1000base-t
+    poe_mode: pse
+    poe_type: type1-ieee802.3af
+  - name: port2
+    type: 1000base-t
+    poe_mode: pse
+    poe_type: type1-ieee802.3af
+  - name: port3
+    type: 1000base-t
+    poe_mode: pse
+    poe_type: type1-ieee802.3af
+  - name: port4
+    type: 1000base-t
+    poe_mode: pse
+    poe_type: type1-ieee802.3af
+  - name: port5
+    type: 1000base-t
+    poe_mode: pse
+    poe_type: type1-ieee802.3af
+  - name: port6
+    type: 1000base-t
+    poe_mode: pse
+    poe_type: type1-ieee802.3af
+  - name: port7
+    type: 1000base-t
+    poe_mode: pse
+    poe_type: type1-ieee802.3af
+  - name: port8
+    type: 1000base-t
+    poe_mode: pse
+    poe_type: type1-ieee802.3af
+  - name: port9
+    type: 1000base-t
+  - name: port10
+    type: 1000base-t
+power-ports:
+  - name: AC In
+    type: iec-60320-c14

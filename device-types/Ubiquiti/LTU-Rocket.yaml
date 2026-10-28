@@ -1,0 +1,20 @@
+---
+manufacturer: Ubiquiti
+model: LTU-Rocket
+slug: ubiquiti-ltu-rocket
+part_number: LTU-Rocket
+u_height: 0
+is_full_depth: false
+comments: |
+  LTU is Ubiquiti's own radio protocol, so the radio is listed as 'other wireless'. From Ubiquiti's tech specs page.
+  2 x GbE RJ45, no SFP. Passive PoE input on 4 pairs or 2 pairs, 18-54 V DC (24 V 1 A adapter included). No PoE passthrough is listed, so neither port is PoE out.
+airflow: passive
+interfaces:
+  - name: lan0
+    type: 1000base-t
+    poe_mode: pd
+    poe_type: passive-24v-4pair
+  - name: lan1
+    type: 1000base-t
+  - name: wlan0
+    type: other-wireless

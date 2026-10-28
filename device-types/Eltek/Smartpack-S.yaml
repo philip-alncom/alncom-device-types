@@ -1,0 +1,57 @@
+---
+manufacturer: Eltek
+model: Smartpack S
+slug: eltek-smartpack-s
+u_height: 1
+is_full_depth: false
+comments: |
+  Eltek Smartpack S controller as fitted in a Flatpack S 1U 48 V DC power system (the model name is what the controller reports over SNMP). From Eltek's Flatpack S 1U data sheet: 1U, 19 inch, 262 mm deep (300 mm cabinet depth recommended), 5.2 to 5.3 kg without rectifiers, 100-250 V AC input on rear terminal blocks, 48 V DC output, a controller with an Ethernet port, and room for 2 or 3 Flatpack S 48 V 1000 W rectifiers (40 A or 100 A in total).
+  Module bays are the most any variant has: 3 rectifier slots (a 2R system fills two), 2 plug-in battery breakers and 7 load positions (a 3R system uses 2). Leave the unused ones empty. A real unit reported its rectifiers as "FLATPACK S 48/1800 HE", not the 1000 W in the data sheet, so check the rectifier type per site. The matching module types are in module-types/Eltek/.
+  Not modelled: the controller's other inputs and outputs. If a site uses a different Eltek shelf, change the height.
+airflow: passive
+weight: 5.3
+weight_unit: kg
+interfaces:
+  - name: Ethernet
+    type: 100base-tx
+    mgmt_only: true
+power-ports:
+  - name: AC In
+    type: hardwired
+module-bays:
+  - name: Rectifier 1
+    position: R1
+    description: "Flatpack S rectifier, hot-pluggable (2R systems have only the first two)"
+  - name: Rectifier 2
+    position: R2
+    description: "Flatpack S rectifier, hot-pluggable (2R systems have only the first two)"
+  - name: Rectifier 3
+    position: R3
+    description: "Flatpack S rectifier, hot-pluggable (2R systems have only the first two)"
+  - name: Battery breaker 1
+    position: B1
+    description: "Plug-in battery breaker, up to 60 A (2R) or 100 A (3R); with one battery string, one can be used as a load breaker"
+  - name: Battery breaker 2
+    position: B2
+    description: "Plug-in battery breaker, up to 60 A (2R) or 100 A (3R); with one battery string, one can be used as a load breaker"
+  - name: Load 1
+    position: L1
+    description: "Load breaker or fuse position (2R: up to 7 x 30 A MCB or 7 x 15 A fuses; 3R: 2 x 60 A at the rear)"
+  - name: Load 2
+    position: L2
+    description: "Load breaker or fuse position (2R: up to 7 x 30 A MCB or 7 x 15 A fuses; 3R: 2 x 60 A at the rear)"
+  - name: Load 3
+    position: L3
+    description: "Load breaker or fuse position (2R: up to 7 x 30 A MCB or 7 x 15 A fuses; 3R: 2 x 60 A at the rear)"
+  - name: Load 4
+    position: L4
+    description: "Load breaker or fuse position (2R: up to 7 x 30 A MCB or 7 x 15 A fuses; 3R: 2 x 60 A at the rear)"
+  - name: Load 5
+    position: L5
+    description: "Load breaker or fuse position (2R: up to 7 x 30 A MCB or 7 x 15 A fuses; 3R: 2 x 60 A at the rear)"
+  - name: Load 6
+    position: L6
+    description: "Load breaker or fuse position (2R: up to 7 x 30 A MCB or 7 x 15 A fuses; 3R: 2 x 60 A at the rear)"
+  - name: Load 7
+    position: L7
+    description: "Load breaker or fuse position (2R: up to 7 x 30 A MCB or 7 x 15 A fuses; 3R: 2 x 60 A at the rear)"

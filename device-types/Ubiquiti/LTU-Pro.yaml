@@ -1,0 +1,18 @@
+---
+manufacturer: Ubiquiti
+model: LTU-Pro
+slug: ubiquiti-ltu-pro
+part_number: LTU-PRO
+u_height: 0
+is_full_depth: false
+comments: |
+  LTU is Ubiquiti's own radio protocol, so the radio is listed as 'other wireless'. From Ubiquiti's tech specs page.
+  1 x GbE RJ45, no SFP. Passive PoE 2-pair (pins 4,5+ 7,8-), 22-27 V DC (24 V 0.5 A adapter included).
+airflow: passive
+interfaces:
+  - name: lan0
+    type: 1000base-t
+    poe_mode: pd
+    poe_type: passive-24v-2pair
+  - name: wlan0
+    type: other-wireless

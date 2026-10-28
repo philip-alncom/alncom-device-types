@@ -1,0 +1,36 @@
+---
+manufacturer: Ubiquiti
+model: sunMAX SolarPoint
+slug: ubiquiti-sunmax-solarpoint
+part_number: SM-SP-40
+u_height: 0
+is_full_depth: false
+comments: |
+  Solar charge controller (MPPT) with a 4-port 10/100 switch and a WiFi access point. From the retailer's data: 4 x 10/100 with 24 V passive PoE out (pins 4,5+ 7,8-, non-standard, 17 W per port at most), PV input 10-60 V (H4 connectors), external 24 V battery charging up to 7 A, management over Ethernet and WiFi. The WiFi band is not stated.
+  Interface names are not the unit's own: its SNMP shows wan0, lldp1 to lldp4 and wlan0.
+airflow: passive
+interfaces:
+  - name: port1
+    type: 100base-tx
+    poe_mode: pse
+    poe_type: passive-24v-2pair
+  - name: port2
+    type: 100base-tx
+    poe_mode: pse
+    poe_type: passive-24v-2pair
+  - name: port3
+    type: 100base-tx
+    poe_mode: pse
+    poe_type: passive-24v-2pair
+  - name: port4
+    type: 100base-tx
+    poe_mode: pse
+    poe_type: passive-24v-2pair
+  - name: wlan0
+    label: WiFi
+    type: other-wireless
+power-ports:
+  - name: PV In
+    type: dc-terminal
+  - name: Battery
+    type: dc-terminal

@@ -1,0 +1,106 @@
+---
+manufacturer: Raritan
+model: PX4-559A-E8
+slug: raritan-px4-559a-e8
+part_number: PX4-559A-E8
+u_height: 0
+is_full_depth: false
+comments: |
+  Metered/switched PDU from Raritan's PX4-559A-E8 data sheet: one 3 m cord with an IEC 60309 2P+E 6h 16 A plug (230 V, 1 phase, 3.7 kVA), 16 x C13 (10 A) and 8 x Cx (16 A) outlets, 2 gigabit Ethernet ports (one redundant), RS-232 serial, 2 x USB-A, USB-B, a sensor port and a PDU link port, 3.53 kg.
+  The line drawing shows four groups of 4 x C13 then 2 x Cx, with the controller panel between the second and third groups. Outlet 1 is at the right-hand end of the drawing (the end away from the inlet), so numbering runs right to left: 1-2 Cx, 3-6 C13, 7-8 Cx, 9-12 C13, 13-14 Cx, 15-18 C13, 19-20 Cx, 21-24 C13 (confirmed by the owner).
+airflow: passive
+console-ports:
+  - name: Serial
+    type: rj-45
+  - name: USB-A 1
+    type: usb-a
+  - name: USB-A 2
+    type: usb-a
+  - name: USB-B
+    type: usb-b
+interfaces:
+  - name: eth0
+    label: Ethernet
+    type: 1000base-t
+    mgmt_only: true
+  - name: eth1
+    label: Ethernet (redundant)
+    type: 1000base-t
+    mgmt_only: true
+power-ports:
+  - name: Inlet I1
+    type: iec-60309-2p-e-6h
+    maximum_draw: 3680
+power-outlets:
+  - name: Outlet 1
+    type: hdot-cx
+    power_port: Inlet I1
+  - name: Outlet 2
+    type: hdot-cx
+    power_port: Inlet I1
+  - name: Outlet 3
+    type: iec-60320-c13
+    power_port: Inlet I1
+  - name: Outlet 4
+    type: iec-60320-c13
+    power_port: Inlet I1
+  - name: Outlet 5
+    type: iec-60320-c13
+    power_port: Inlet I1
+  - name: Outlet 6
+    type: iec-60320-c13
+    power_port: Inlet I1
+  - name: Outlet 7
+    type: hdot-cx
+    power_port: Inlet I1
+  - name: Outlet 8
+    type: hdot-cx
+    power_port: Inlet I1
+  - name: Outlet 9
+    type: iec-60320-c13
+    power_port: Inlet I1
+  - name: Outlet 10
+    type: iec-60320-c13
+    power_port: Inlet I1
+  - name: Outlet 11
+    type: iec-60320-c13
+    power_port: Inlet I1
+  - name: Outlet 12
+    type: iec-60320-c13
+    power_port: Inlet I1
+  - name: Outlet 13
+    type: hdot-cx
+    power_port: Inlet I1
+  - name: Outlet 14
+    type: hdot-cx
+    power_port: Inlet I1
+  - name: Outlet 15
+    type: iec-60320-c13
+    power_port: Inlet I1
+  - name: Outlet 16
+    type: iec-60320-c13
+    power_port: Inlet I1
+  - name: Outlet 17
+    type: iec-60320-c13
+    power_port: Inlet I1
+  - name: Outlet 18
+    type: iec-60320-c13
+    power_port: Inlet I1
+  - name: Outlet 19
+    type: hdot-cx
+    power_port: Inlet I1
+  - name: Outlet 20
+    type: hdot-cx
+    power_port: Inlet I1
+  - name: Outlet 21
+    type: iec-60320-c13
+    power_port: Inlet I1
+  - name: Outlet 22
+    type: iec-60320-c13
+    power_port: Inlet I1
+  - name: Outlet 23
+    type: iec-60320-c13
+    power_port: Inlet I1
+  - name: Outlet 24
+    type: iec-60320-c13
+    power_port: Inlet I1

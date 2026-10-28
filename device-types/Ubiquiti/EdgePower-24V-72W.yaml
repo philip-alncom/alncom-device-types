@@ -1,0 +1,32 @@
+---
+manufacturer: Ubiquiti
+model: EdgePower 24V-72W
+slug: ubiquiti-edgepower-24v-72w
+part_number: EP-24V-72W
+u_height: 0
+is_full_depth: false
+comments: |
+  From Ubiquiti's quick start guide: 2 x 10/100 RJ45 switch ports that also give 24 V passive PoE out (pins 4,5+ 7,8-), AC input 100-240 V, DC Out terminal block 24 V 3 A, optional 12 V lead-acid battery input, 115 x 192 x 43.7 mm, 650 g, 72 W output plus 2 W for the unit. Managed in-band over Ethernet.
+  Interface names Port 1 and Port 2 are not the names the unit reports (its SNMP shows eth0 and eth1); check before relying on them.
+airflow: passive
+weight: 650
+weight_unit: g
+interfaces:
+  - name: Port 1
+    type: 100base-tx
+    poe_mode: pse
+    poe_type: passive-24v-2pair
+  - name: Port 2
+    type: 100base-tx
+    poe_mode: pse
+    poe_type: passive-24v-2pair
+power-ports:
+  - name: AC In
+    type: iec-60320-c14
+    maximum_draw: 74
+  - name: Battery In
+    type: dc-terminal
+power-outlets:
+  - name: DC Out
+    type: dc-terminal
+    power_port: AC In

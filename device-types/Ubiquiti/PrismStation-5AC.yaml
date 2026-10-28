@@ -1,0 +1,17 @@
+---
+manufacturer: Ubiquiti
+model: PrismStation 5AC
+slug: ubiquiti-prismstation-5ac
+part_number: PS-5AC
+u_height: 0
+is_full_depth: false
+comments: |
+  Same layout as the Rocket Prism. Components not yet checked against a datasheet or a real unit: check before relying on them.
+airflow: passive
+interfaces:
+  - name: lan0
+    type: 1000base-t
+    poe_mode: pd
+    poe_type: passive-24v-2pair
+  - name: wlan0
+    type: ieee802.11ac

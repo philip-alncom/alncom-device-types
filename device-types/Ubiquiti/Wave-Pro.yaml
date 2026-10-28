@@ -1,0 +1,32 @@
+---
+manufacturer: Ubiquiti
+model: Wave Pro
+slug: ubiquiti-wave-pro
+part_number: Wave-Pro
+u_height: 0
+is_full_depth: false
+comments: |
+  60 GHz radio (57-71 GHz, 2160/1080/540 MHz channels) with a 5 GHz backup radio (802.11ax). From Ubiquiti's tech specs page: 2 x 2.5 GbE RJ45 and 1 x 10G SFP+. Passive PoE input on 4 pairs (44-54 V DC) or 2 pairs (22-27 V DC); 48 V 0.65 A adapter included.
+  Interface names follow a real Wave Pro SNMP walk (eth0, eth1, ath0, wlan0, br0); sfp0 is a guess.
+airflow: passive
+interfaces:
+  - name: br0
+    type: bridge
+    mgmt_only: true
+  - name: eth0
+    label: Ethernet 1
+    type: 2.5gbase-t
+    poe_mode: pd
+    poe_type: passive-48v-4pair
+  - name: eth1
+    label: Ethernet 2
+    type: 2.5gbase-t
+  - name: sfp0
+    label: SFP+
+    type: 10gbase-x-sfpp
+  - name: ath0
+    label: 60 GHz
+    type: ieee802.11ad
+  - name: wlan0
+    label: 5 GHz
+    type: ieee802.11ax
