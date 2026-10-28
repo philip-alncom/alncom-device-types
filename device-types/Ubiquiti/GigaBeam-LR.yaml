@@ -7,8 +7,12 @@ u_height: 0
 is_full_depth: false
 comments: |
   60 GHz point-to-point radio with an integrated 5 GHz backup radio. From Ubiquiti's tech specs page: 1 x GbE RJ45, no SFP or SFP+; passive PoE 2-pair (pins 4,5+ 7,8-), 22-27 V DC (24 V 0.5 A adapter included). The 5 GHz radio's standard is not stated, so it is listed as 'other wireless'.
+  br0 is the bridge joining the LAN and radio ports (airFiber 60 and airOS SNMP walks show it); it was not seen on a GigaBeam itself.
 airflow: passive
 interfaces:
+  - name: br0
+    type: bridge
+    mgmt_only: true
   - name: eth0
     label: Ethernet
     type: 1000base-t

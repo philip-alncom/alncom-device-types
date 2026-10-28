@@ -9,6 +9,9 @@ comments: |
   Same layout as the library's other PowerBeam 5AC models. Components not yet checked against a datasheet or a real unit: check before relying on them.
 airflow: passive
 interfaces:
+  - name: br0
+    type: bridge
+    mgmt_only: true
   - name: lan0
     type: 1000base-t
     poe_mode: pd
