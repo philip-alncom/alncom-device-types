@@ -18,6 +18,7 @@ interfaces:
     type: 1000base-t
     poe_mode: pd
     poe_type: type2-ieee802.3at
+    description: "PoE in: 802.3at (type 2)"
   - name: ath0
     label: Wireless
     type: ieee802.11ac

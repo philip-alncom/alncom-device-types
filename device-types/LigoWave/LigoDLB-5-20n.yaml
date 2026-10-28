@@ -18,6 +18,7 @@ interfaces:
     type: 100base-tx
     poe_mode: pd
     poe_type: passive-24v-2pair
+    description: "PoE in: passive 24 V (pins 4,5 +, 7,8 -), 12-24 V"
   - name: ath0
     label: Wireless
     type: ieee802.11n
