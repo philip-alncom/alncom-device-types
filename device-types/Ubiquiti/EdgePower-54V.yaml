@@ -16,10 +16,12 @@ interfaces:
     type: 100base-tx
     poe_mode: pse
     poe_type: passive-48v-2pair
+    description: "PoE out: passive 54 V"
   - name: Port 2
     type: 100base-tx
     poe_mode: pse
     poe_type: passive-48v-2pair
+    description: "PoE out: passive 54 V"
 power-ports:
   - name: AC In
     type: iec-60320-c14
@@ -27,5 +29,9 @@ power-ports:
   - name: Battery In
     type: dc-terminal
 power-outlets:
+  - name: PoE out 1
+    type: other
+  - name: PoE out 2
+    type: other
   - name: DC Out
     type: dc-terminal
